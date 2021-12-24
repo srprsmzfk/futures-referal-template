@@ -13,7 +13,7 @@ document.querySelector('.btn').addEventListener('click', () => generateCard())
 function generateCard() {
     const fields = document.forms[0].elements;
     let img = new Image();
-    img.src = './assets/template.png';
+    img.src = 'assets/template.png';
     img.onload = () => {
         canvas.width = img.width;
         canvas.height = img.height;
