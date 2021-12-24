@@ -1,0 +1,90 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+form {
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+input {
+    height: 100% !important;
+    font-size: inherit;
+}
+
+button {
+    outline: none !important;
+}
+
+.btn {
+    margin-top: 20px;
+    height: 70px;
+    width: 100%;
+    color: white;
+    background-color: #2d2c2c !important;
+}
+
+select {
+    height: 100% !important;
+}
+
+.form-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sell-buy {
+    top: 30%;
+    left: 12%;
+    width: 12%;
+}
+
+.xxx {
+    top: 30%;
+    left: 29%;
+    width: 7%;
+}
+
+.coin {
+    top: 30%;
+    left: 41%;
+    width: 12%;
+}
+
+.percent {
+    top: 42%;
+    left: 18%;
+    width: 26%;
+    height: 8%;
+    font-size: 150%;
+}
+
+.entry {
+    top: 54%;
+    left: 41%;
+    width: 19%;
+}
+
+.exit {
+    top: 60%;
+    left: 41%;
+    width: 19%;
+}
+
+.referral {
+    top: 79%;
+    left: 24%;
+    width: 12%;
+}

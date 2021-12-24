@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=IBM+Plex+Sans:wght@100;400;700&display=swap"
+          rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <form>
+        <img src="assets/background.png">
+        <div class="form-group sell-buy">
+            <select class="form-control form-select" name="sell-buy" id="sell-buy">
+                <option selected value="Купить ">Купить</option>
+                <option value="Продать">Продать</option>
+            </select>
+        </div>
+        <div class="form-group xxx">
+            <select class="form-control form-select" name="xxx" id="xxx">
+                <option selected value="25x">25x</option>
+                <option value="50x">50x</option>
+                <option value="75x">75x</option>
+                <option value="100x">100x</option>
+                <option value="125x">125x</option>
+            </select>
+        </div>
+        <div class="form-group coin">
+            <input class="form-control form-control-lg sell" type="text" id="coin" name="coin">
+        </div>
+        <div class="form-group percent">
+            <input class="form-control form-control-lg sell" type="text" id="percent" name="percent">
+        </div>
+        <div class="form-group entry">
+            <input class="form-control form-control-lg sell" type="text" id="entry" name="entry">
+        </div>
+        <div class="form-group exit">
+            <input class="form-control form-control-lg sell" type="text" id="exit" name="exit">
+        </div>
+        <div class="form-group referral">
+            <select class="form-control form-select" name="referral" id="referral">
+                <option selected value="Мальцев">Мальцев</option>
+                <option value="Доронин">Доронин</option>
+                <option value="Шевченко">Шевченко</option>
+            </select>
+        </div>
+    </form>
+    <button class="btn btn-primary btn-lg" type="button">Generate</button>
+
+</div>
+</body>
+<script src="script.js"></script>
+</html>
