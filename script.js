@@ -13,7 +13,7 @@ document.querySelector('.btn').addEventListener('click', () => generateCard())
 function generateCard() {
     const fields = document.forms[0].elements;
     let img = new Image();
-    img.src = '../assets/template.png';
+    img.src = './assets/template.png';
     img.onload = () => {
         canvas.width = img.width;
         canvas.height = img.height;
@@ -56,7 +56,7 @@ function getReferral(name) {
 function setReferral(name) {
     drawText(getReferral(name), 240, 520, `500 40px ${plex}`, white);
     let qr = new Image();
-    qr.src = `../assets/${name}.png`;
+    qr.src = `./assets/${name}.png`;
     qr.onload = () => {
         context.drawImage(qr, 114, 459, 102, 102);
         openImg();
