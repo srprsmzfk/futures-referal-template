@@ -2,16 +2,27 @@ body {
     padding: 0;
     margin: 0;
 }
+.font-hack {
+    height: 0;
+}
+
+.font-hack {
+    height: 0;
+}
 
 .container {
-    height: 100%;
     width: 100%;
     padding: 20px;
     position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 form {
     position: relative;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 img {
@@ -33,6 +44,7 @@ button {
     width: 100%;
     color: white;
     background-color: #2d2c2c !important;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 select {

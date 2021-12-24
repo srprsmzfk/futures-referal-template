@@ -5,13 +5,10 @@ const red = '#b55270';
 const green = '#30b47e';
 const yellow = '#baa620';
 
-// let canvas = document.getElementById('canvas');
 let canvas = document.createElement('canvas');
 let context = canvas.getContext("2d");
 
 document.querySelector('.btn').addEventListener('click', () => generateCard())
-
-// generateCard();
 
 function generateCard() {
     const fields = document.forms[0].elements;
@@ -62,13 +59,12 @@ function setReferral(name) {
     qr.src = `../assets/${name}.png`;
     qr.onload = () => {
         context.drawImage(qr, 114, 459, 102, 102);
-        finish();
+        openImg();
     }
 }
 
-function finish() {
-    let newTab = window.open();
-    let url = canvas.toDataURL();
-    newTab.document.body.innerHTML = `<img src="${url}">`;
-    // window.open(canvas.toDataURL(), '_blank');
+function openImg() {
+    canvas.toBlob((blob) => {
+        window.open(URL.createObjectURL(blob));
+    });
 }
