@@ -66,6 +66,6 @@ function setReferral(name) {
 function openImg() {
     // document.querySelector('.container').appendChild(canvas);
     canvas.toBlob((blob) => {
-        window.open(URL.createObjectURL(blob));
+        window.open(URL.createObjectURL(blob), '_self');
     });
 }
