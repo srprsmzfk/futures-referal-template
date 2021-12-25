@@ -1,5 +1,5 @@
-const plex = "'IBM Plex Sans', sans-serif";
-const plexCondensed = "'IBM Plex Sans Condensed', sans-serif";
+const plex = "'BinanceRegular', Arial, sans-serif";
+const plexCondensed = "'BinanceMedium', Arial, sans-serif";
 const white = '#ffffff';
 const red = '#b55270';
 const green = '#30b47e';
@@ -26,7 +26,7 @@ function generateCard() {
 
         drawText(fields['coin'].value.toUpperCase() + '  Бессрочный', 430, 213, `400 30px ${plex}`);
 
-        drawText(`+ ${fields['percent'].value} %`, 115, 315, `900 95px ${plexCondensed}`, green);
+        drawText(`+${fields['percent'].value} %`, 115, 315, `95px ${plexCondensed}`, green);
 
         drawText(fields['entry'].value, 390, 366, `400 30px ${plex}`, yellow);
         drawText(fields['exit'].value, 390, 400, `400 30px ${plex}`, yellow);
@@ -64,6 +64,7 @@ function setReferral(name) {
 }
 
 function openImg() {
+    // document.querySelector('.container').appendChild(canvas);
     canvas.toBlob((blob) => {
         window.open(URL.createObjectURL(blob));
     });
