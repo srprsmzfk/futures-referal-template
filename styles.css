@@ -9,6 +9,7 @@
 }
 
 body {
+    background-color: #1a1a1a !important;
     padding: 0;
     margin: 0;
 }
@@ -33,6 +34,7 @@ body {
 form {
     position: relative;
     font-family: 'BinanceMedium', Arial, sans-serif;
+    border: 1px solid #fcb202;
 }
 
 img {
@@ -52,9 +54,11 @@ button {
     margin-top: 20px;
     height: 70px;
     width: 100%;
-    color: white;
     background-color: #2d2c2c !important;
     font-family: 'BinanceRegular', Arial, sans-serif;
+    border-color: #fcb202 !important;
+    font-size: 25px !important;
+    color: #fcb202;
 }
 
 select {
