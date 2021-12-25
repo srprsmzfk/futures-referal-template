@@ -54,7 +54,7 @@ function getReferral(name) {
 }
 
 function setReferral(name) {
-    drawText(getReferral(name), 240, 520, `500 40px ${plex}`, white);
+    drawText(getReferral(name), 240, 522, `500 40px ${plex}`, white);
     let qr = new Image();
     qr.src = `./assets/${name}.png`;
     qr.onload = () => {
