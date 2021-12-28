@@ -63,6 +63,7 @@ button {
 
 select {
     height: 100% !important;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .form-group {

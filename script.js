@@ -1,9 +1,10 @@
 const plex = "'BinanceRegular', Arial, sans-serif";
 const plexCondensed = "'BinanceMedium', Arial, sans-serif";
+const plexComma = "'IBM Plex Sans', sans-serif";
 const white = '#ffffff';
-const red = '#b55270';
-const green = '#30b47e';
-const yellow = '#baa620';
+const red = '#f6465d';
+const green = '#0ecb81';
+const yellow = '#f0b90b';
 
 let canvas = document.createElement('canvas');
 let context = canvas.getContext("2d");
@@ -26,9 +27,10 @@ function generateCard() {
 
         drawText(fields['coin'].value.toUpperCase() + '  Бессрочный', 430, 213, `400 30px ${plex}`);
 
-        drawText(`+${fields['percent'].value} %`, 115, 315, `95px ${plexCondensed}`, green);
+        drawText(`+${fields['percent'].value} %`, 115, 315, `400 95px ${plexCondensed}`, green);
 
         drawText(fields['entry'].value, 390, 366, `400 30px ${plex}`, yellow);
+
         drawText(fields['exit'].value, 390, 400, `400 30px ${plex}`, yellow);
 
         setReferral(fields['referral'].value);
@@ -42,14 +44,18 @@ function drawText(text, x, y, font, color) {
     if (color) {
         context.fillStyle = color;
     }
-    context.fillText(text, x, y);
+    if (text && text.includes(',')) {
+        measureComma(text, x, y, font);
+    } else {
+        context.fillText(text, x, y);
+    }
 }
 
 function getReferral(name) {
     switch (name) {
-        case 'Мальцев': return 39672901
-        case 'Доронин' : return 44632377
-        case 'Шевченко' : return 32783012
+        case 'Мальцев': return '39672901'
+        case 'Доронин' : return '44632377'
+        case 'Шевченко' : return '32783012'
     }
 }
 
@@ -68,4 +74,15 @@ function openImg() {
     canvas.toBlob((blob) => {
         window.open(URL.createObjectURL(blob), '_self');
     });
+}
+
+function measureComma(text, x, y, font) {
+    let arr = text.split(',');
+    let numWidth = context.measureText(arr[0]).width;
+    let commaWidth = context.measureText(',').width;
+    context.fillText(arr[0], x, y);
+    context.font = `400 ${font.split(' ')[1]} ${plexComma}`;
+    context.fillText(`,`, x + numWidth, y);
+    context.font = font;
+    context.fillText(arr[1], x + numWidth + commaWidth, y);
 }
