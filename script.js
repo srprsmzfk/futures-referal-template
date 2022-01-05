@@ -23,7 +23,7 @@ function generateCard() {
 
         drawText(fields['sell-buy'].value, fields['sell-buy'].value === 'Продать' ? 120 : 135, 213, `400 30px ${plex}`, fields['sell-buy'].value === 'Продать' ? red : green );
 
-        drawText(fields['xxx'].value, fields['xxx'].value.length === 3 ? 314 : 302, 213, `400 30px ${plex}`, white);
+        drawText(fields['xxx'].value, fields['xxx'].value.length === 3 ? 312 : 302, 213, `400 30px ${plex}`, white);
 
         drawText(fields['coin'].value.toUpperCase() + '  Бессрочный', 430, 213, `400 30px ${plex}`);
 
