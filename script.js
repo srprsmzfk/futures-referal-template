@@ -57,7 +57,7 @@ function getReferral(name) {
         case 'Доронин' : return '44632377'
         case 'Шевченко' : return '32783012'
         case 'Александр(Санта)' : return '354277848'
-        case 'Макс' : return '377624412'
+        case 'Брагин' : return '174608558'
     }
 }
 
