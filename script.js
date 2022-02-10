@@ -5,6 +5,40 @@ const white = '#ffffff';
 const red = '#f6465d';
 const green = '#0ecb81';
 const yellow = '#f0b90b';
+const CLIENTS = [
+    {
+        name: 'Мальцев',
+        id: '39672901',
+    },
+    {
+        name: 'Доронин',
+        id: '44632377',
+    },
+    {
+        name: 'Шевченко',
+        id: '32783012',
+    },
+    {
+        name: 'Александр(Санта)',
+        id: '354277848',
+    },
+    {
+        name: 'Брагин',
+        id: '174608558',
+    },
+    {
+        name: 'Беспалов',
+        id: '143990080',
+    },
+    {
+        name: 'Диденко',
+        id: '61836051',
+    },
+    {
+        name: 'Клиент1',
+        id: '45542939',
+    },
+];
 
 let canvas = document.createElement('canvas');
 let context = canvas.getContext("2d");
@@ -58,9 +92,14 @@ function getReferral(name) {
         case 'Шевченко' : return '32783012'
         case 'Александр(Санта)' : return '354277848'
         case 'Брагин' : return '174608558'
-        case 'Клиент1' : return '143990080'
-        case 'Клиент2' : return '61836051'
-        case 'Клиент3' : return '45542939'
+        case 'Беспалов' : return '143990080'
+        case 'Диденко' : return '61836051'
+        case 'Клиент1' : return '45542939'
+        case 'Клиент2' : return '173867694'
+        case 'Клиент3' : return '185340163'
+        case 'Клиент4' : return '204108810'
+        case 'Клиент5' : return '159585839'
+        case 'Клиент6' : return '38740560'
     }
 }
 
@@ -91,3 +130,10 @@ function measureComma(text, x, y, font) {
     context.font = font;
     context.fillText(arr[1], x + numWidth + commaWidth, y);
 }
+
+// function setClients() {
+//     const ref = document.querySelector('#referral');
+//     CLIENTS.forEach(client => {
+//         document.createElement()
+//     })
+// }
