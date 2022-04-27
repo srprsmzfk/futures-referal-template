@@ -80,6 +80,16 @@ select {
     width: 12%;
 }
 
+.background {
+    top: 5%;
+    left: 83%;
+    width: 12%;
+}
+
+.background label {
+    color: white;
+}
+
 .xxx {
     top: 30%;
     left: 29%;

@@ -5,6 +5,26 @@ const white = '#ffffff';
 const red = '#f6465d';
 const green = '#0ecb81';
 const yellow = '#f0b90b';
+/* refactor
+const MARKUP = {
+    standart: {
+        'sell-buy': {
+            x: 120,
+            y: 213,
+        },
+        xxx: {
+            x: 120,
+            y: 213,
+        },
+        coin: {
+            x: 120,
+            y: 213,
+        },
+    },
+    rocket: {
+
+    }
+}
 const CLIENTS = [
     {
         name: 'Мальцев',
@@ -39,6 +59,7 @@ const CLIENTS = [
         id: '45542939',
     },
 ];
+ */
 
 let canvas = document.createElement('canvas');
 let context = canvas.getContext("2d");
@@ -48,7 +69,7 @@ document.querySelector('.btn').addEventListener('click', () => generateCard())
 function generateCard() {
     const fields = document.forms[0].elements;
     let img = new Image();
-    img.src = 'assets/template.png';
+    img.src = `assets/${fields.background.value}.png`;
     img.onload = () => {
         canvas.width = img.width;
         canvas.height = img.height;
@@ -57,17 +78,17 @@ function generateCard() {
 
         drawText(fields['sell-buy'].value, fields['sell-buy'].value === 'Продать' ? 120 : 135, 213, `400 30px ${plex}`, fields['sell-buy'].value === 'Продать' ? red : green );
 
-        drawText(fields['xxx'].value, fields['xxx'].value.length === 3 ? 312 : 302, 213, `400 30px ${plex}`, white);
+        drawText(fields.xxx.value, fields.xxx.value.length === 3 ? 312 : 302, 213, `400 30px ${plex}`, white);
 
-        drawText(fields['coin'].value.toUpperCase() + '  Бессрочный', 430, 213, `400 30px ${plex}`);
+        drawText(fields.coin.value.toUpperCase() + '  Бессрочный', 430, 213, `400 30px ${plex}`);
 
-        drawText(`+${fields['percent'].value} %`, 115, 315, `400 95px ${plexCondensed}`, green);
+        drawText(`+${fields.percent.value} %`, 115, 315, `400 95px ${plexCondensed}`, green);
 
-        drawText(fields['entry'].value, 390, 366, `400 30px ${plex}`, yellow);
+        drawText(fields.entry.value, 390, 366, `400 30px ${plex}`, yellow);
 
-        drawText(fields['exit'].value, 390, 400, `400 30px ${plex}`, yellow);
+        drawText(fields.exit.value, 390, 400, `400 30px ${plex}`, yellow);
 
-        setReferral(fields['referral'].value);
+        setReferral(fields.referral.value);
     };
 }
 
