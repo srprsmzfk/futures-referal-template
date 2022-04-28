@@ -127,3 +127,12 @@ select {
     left: 24%;
     width: 12%;
 }
+.switch {
+    color: white;
+    top: 92%;
+    left: 86%;
+}
+
+.switch a:hover {
+    color: #0ecb81;
+}
